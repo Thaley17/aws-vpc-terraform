@@ -18,11 +18,8 @@ module "vpc" {
 
   enable_ipv6 = true
 
-  enable_nat_gateway = true
+  enable_nat_gateway = false
   single_nat_gateway = true
-
-  enable_s3_endpoint       = false
-  enable_dynamodb_endpoint = false
 
   public_subnet_tags = {
     Name = "overridden-name-public"

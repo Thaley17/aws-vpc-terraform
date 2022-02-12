@@ -6,9 +6,9 @@ provider "aws" {
 # Building simple VPC
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws//"
-  version = "2.78.0"
+  version = "3.12.0"
 
-  name = "nomad-vpc"
+  name = "kion-vpc"
 
   cidr = "10.0.0.0/16"
 
@@ -29,11 +29,11 @@ module "vpc" {
   }
 
   tags = {
-    Owner       = "nomad"
-    Environment = "dev"
+    Owner       = "kion"
+    Environment = "kion-demo"
   }
 
   vpc_tags = {
-    Name = "nomad-vpc"
+    Name = "kion-demo"
   }
 }
